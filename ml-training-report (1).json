@@ -1,0 +1,169 @@
+{
+  "title": "ML Model Training Report — Duxport",
+  "generatedAt": "2026-02-24T05:23:27.543Z",
+  "dataset": {
+    "fileName": "navi_mumbai_real_estate_uncleaned_2500 (1)_cleaned.csv",
+    "rows": 2500,
+    "columns": 10,
+    "targetColumn": "actual_price",
+    "taskType": "regression"
+  },
+  "models": [
+    {
+      "name": "Gradient Boosting Regressor",
+      "id": "gradient_boost_reg",
+      "isBest": true,
+      "metrics": {
+        "r2_score": 0.8951112597713157,
+        "mse": 15770111654970.148,
+        "rmse": 3971159.9885889953,
+        "mae": 2600529.6832568543
+      },
+      "featureImportance": [
+        {
+          "name": "area_sqft",
+          "importance": 0.6358077448238738
+        },
+        {
+          "name": "age_of_property",
+          "importance": 0.09396989017553532
+        },
+        {
+          "name": "bhk",
+          "importance": 0.07525804646369162
+        },
+        {
+          "name": "total_floors",
+          "importance": 0.060016051899116414
+        },
+        {
+          "name": "floor",
+          "importance": 0.055572661060564285
+        },
+        {
+          "name": "location",
+          "importance": 0.049691244239631345
+        },
+        {
+          "name": "bathrooms",
+          "importance": 0.01928091397849463
+        },
+        {
+          "name": "parking",
+          "importance": 0.005829714640198512
+        },
+        {
+          "name": "lift",
+          "importance": 0.00457373271889401
+        }
+      ],
+      "trainingTime": 105549
+    },
+    {
+      "name": "Random Forest Regressor",
+      "id": "random_forest_reg",
+      "isBest": false,
+      "metrics": {
+        "r2_score": 0.5320751756309994,
+        "mse": 70352896891914.555,
+        "rmse": 8387663.374976046,
+        "mae": 4697205.8281325735
+      },
+      "featureImportance": [
+        {
+          "name": "area_sqft",
+          "importance": 0.3030732050347326
+        },
+        {
+          "name": "floor",
+          "importance": 0.14494715900711957
+        },
+        {
+          "name": "age_of_property",
+          "importance": 0.1359209465421337
+        },
+        {
+          "name": "total_floors",
+          "importance": 0.12168508394662164
+        },
+        {
+          "name": "bhk",
+          "importance": 0.09200684299535877
+        },
+        {
+          "name": "location",
+          "importance": 0.07670988848773026
+        },
+        {
+          "name": "bathrooms",
+          "importance": 0.06537301284222684
+        },
+        {
+          "name": "parking",
+          "importance": 0.03186342295021155
+        },
+        {
+          "name": "lift",
+          "importance": 0.02842043819386503
+        }
+      ],
+      "trainingTime": 53537
+    },
+    {
+      "name": "Neural Network (MLP)",
+      "id": "neural_net_reg",
+      "isBest": false,
+      "metrics": {
+        "r2_score": 0.8457451479280169,
+        "mse": 23192348722964.457,
+        "rmse": 4815843.511054368,
+        "mae": 3266279.6575
+      },
+      "featureImportance": [
+        {
+          "name": "area_sqft",
+          "importance": 0.3030732050347326
+        },
+        {
+          "name": "floor",
+          "importance": 0.14494715900711957
+        },
+        {
+          "name": "age_of_property",
+          "importance": 0.1359209465421337
+        },
+        {
+          "name": "total_floors",
+          "importance": 0.12168508394662164
+        },
+        {
+          "name": "bhk",
+          "importance": 0.09200684299535877
+        },
+        {
+          "name": "location",
+          "importance": 0.07670988848773026
+        },
+        {
+          "name": "bathrooms",
+          "importance": 0.06537301284222684
+        },
+        {
+          "name": "parking",
+          "importance": 0.03186342295021155
+        },
+        {
+          "name": "lift",
+          "importance": 0.02842043819386503
+        }
+      ],
+      "trainingTime": 20869
+    }
+  ],
+  "configuration": {
+    "epochs": 25,
+    "learningRate": 0.01,
+    "batchSize": 32,
+    "testSplit": 20
+  }
+}

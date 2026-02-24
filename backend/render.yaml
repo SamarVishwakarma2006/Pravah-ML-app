@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: navi-estimate-backend
+    env: python
+    region: ohio
+    plan: free
+    buildCommand: "pip install -r requirements.txt && python ml/train.py"
+    startCommand: "gunicorn app.main:app -w 4 -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: BACKEND_CORS_ORIGINS
+        value: '["*"]' # Must be updated to the Vercel app URL in production
